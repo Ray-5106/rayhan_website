@@ -84,6 +84,20 @@ function updateThemeIcon() {
 function initializeAudio() {
   const audioToggle = document.getElementById('audioToggle');
   
+  // ✨ Hover Chime Sound on Buttons and Cards
+const hoverChime = new Howl({
+  src: ['assets/audio/hover-chime.mp3'],
+  volume: 0.2
+});
+
+function attachHoverChime() {
+  const hoverables = document.querySelectorAll('button, .card, .primaryBtn');
+  hoverables.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (!APP_STATE.audioMuted) hoverChime.play();
+    });
+  });
+}
   // Initialize Howler sound (when library loads)
   if (typeof Howl !== 'undefined') {
     window.introSound = new Howl({
@@ -102,6 +116,7 @@ function initializeAudio() {
   }
   
   audioToggle?.addEventListener('click', toggleAudio);
+  attachHoverChime(); // ✅ Call it here
 }
 
 function toggleAudio() {
