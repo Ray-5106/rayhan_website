@@ -1,330 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ======= BASIC META ======= -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rayhan Hameed | Prefect of Innovation</title>
-  <meta name="description" content="Cinematic, magical portfolio of Rayhan Hameed - ECE @ CIT & BS Data Science @ IIT Madras." />
-  <meta name="keywords" content="Rayhan Hameed, portfolio, ECE, IIT Madras, web developer" />
-  <meta name="author" content="Rayhan Hameed" />
-
-  <!-- ======= OPEN-GRAPH / TWITTER ======= -->
-  <meta property="og:title" content="Rayhan Hameed | Prefect of Innovation" />
-  <meta property="og:description" content="Explore my projects, journey, skills and magical creations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/images/og-cover.jpg" />
-  <meta property="og:url" content="https://your-future-domain.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- ======= FAVICON ======= -->
-  <link rel="icon" href="./assets/icons/favicon.ico" />
-
-  <!-- ======= GOOGLE FONTS ======= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- ======= MAIN STYLES ======= -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- ======= LIBS (CDN) ======= -->
-  <!-- Howler for audio -->
-  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js" defer></script>
-  <!-- GSAP for timeline + quick animations -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <!-- particles.js (rune embers) -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayhan Hameed | Portfolio</title>
+  <meta name="description" content="Portfolio of Rayhan Hameed - ECE @ CIT & BS Data Science @ IIT Madras">
+  
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body data-theme="dark">
-  <!-- ======= SOUND / THEME TOGGLES (FIXED) ======= -->
+<body>
+  <!-- Audio Toggle -->
   <button id="audioToggle" class="utilityBtn" aria-label="Toggle sound">
-    🔇
-  </button>
-  <button id="themeToggle" class="utilityBtn" aria-label="Toggle dark / light">
-    🌗
+    🔊
   </button>
 
-  <!-- ========================================================= -->
-  <!-- 🎬 INTRO SPLASH (5 s)                                    -->
-  <!-- ========================================================= -->
-  <section id="splash" class="splash-screen" aria-label="Intro cinematic">
-    <!-- Radar sweep SVG -->
-    <svg id="radar" class="layer radar" viewBox="0 0 400 400" aria-hidden="true">
-      <!-- Placeholder sweep path -->
-      <circle cx="200" cy="200" r="180" stroke="#00BFFF" stroke-width="2" fill="none" />
-      <line id="sweep" x1="200" y1="200" x2="200" y2="20" stroke="#00BFFF" stroke-width="2" />
-    </svg>
-
-    <!-- Circuit traces canvas -->
-    <canvas id="circuit" class="layer circuit" aria-hidden="true"></canvas>
-
-    <!-- Magical runes SVG group -->
-    <svg id="runes" class="layer runes" viewBox="0 0 400 400" aria-hidden="true">
-      <!-- Placeholder runes -->
-      <text x="50%" y="50%" text-anchor="middle" fill="#FFD700" font-size="48">ᚱᚺ</text>
-    </svg>
-
-    <!-- Book glyphs -->
-    <div id="glyphPages" class="layer glyphs" aria-hidden="true">
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-    </div>
-
-    <!-- Blueprint lines -->
-    <canvas id="blueprint" class="layer blueprint" aria-hidden="true"></canvas>
-
-    <!-- Converging initials -->
-    <h1 id="initials" class="layer initials" aria-label="R H">R<span>.</span>H<span>.</span></h1>
-
-    <!-- Optional Spline 3-D -->
-    <!-- <iframe
-      title="Cinematic 3-D backdrop"
-      src="https://my-spline-scene.spline.design"
-      loading="lazy"
-      class="splineBg"
-    ></iframe> -->
-
-    <!-- Mute-by-default intro audio -->
-    <audio id="introAudio" src="./assets/audio/intro.mp3" preload="auto"></audio>
-
-    <noscript>Intro audio unavailable. Enable JavaScript.</noscript>
+  <!-- Splash Screen -->
+  <section id="splash" class="splash-screen">
+    <div id="splashParticles"></div>
+    <h1 id="initials">R.H.</h1>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 🏠 WELCOME                                                -->
-  <!-- ========================================================= -->
+  <!-- Welcome Section -->
   <header id="welcome" class="welcome-section">
-    <div id="particles-js" aria-hidden="true"></div>
-
+    <div id="particles-js"></div>
     <h2 class="typewriter" aria-live="polite">
-      <span id="typeLine1">Welcome, Prefect&nbsp;of&nbsp;Innovation.</span><br />
-      <span id="typeLine2">Your chamber&nbsp;awaits.</span>
+      <span id="typeLine1">Welcome to My Portfolio</span><br>
+      <span id="typeLine2">Exploring the Intersection of Tech & Creativity</span>
     </h2>
-
-    <button id="enterBtn" class="primaryBtn" title="Enter my world">
-      Enter
-    </button>
+    <button id="enterBtn" class="primaryBtn">Enter</button>
   </header>
 
-  <!-- ========================================================= -->
-  <!-- 📑 NAVIGATION (GLASSMORPHIC)                              -->
-  <!-- ========================================================= -->
-  <nav id="mainNav" class="glass-nav" aria-label="Primary">
+  <!-- Navigation -->
+  <nav id="mainNav" class="glass-nav">
     <div class="nav-brand">R.H.</div>
-
     <ul class="nav-links">
-      <li><a href="#welcome" class="scroll">Welcome</a></li>
-      <li><a href="#about" class="scroll">About&nbsp;the&nbsp;Prefect</a></li>
-      <li><a href="#journey" class="scroll">My&nbsp;Journey</a></li>
-      <li><a href="#projects" class="scroll">Projects&nbsp;& Builds</a></li>
-      <li><a href="#resume" class="scroll">Download&nbsp;My&nbsp;Codex</a></li>
-      <li><a href="#skills" class="scroll">Skills&nbsp;& Tools</a></li>
-      <li><a href="#highlights" class="scroll">Highlights</a></li>
-      <li><a href="#blog" class="scroll">Blog</a></li>
-      <li><a href="#contact" class="scroll">Get&nbsp;in&nbsp;Touch</a></li>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-
-    <!-- Hamburger for mobile -->
     <button id="hamburger" aria-label="Open navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- ========================================================= -->
-  <!-- 📖 ABOUT THE PREFECT                                      -->
-  <!-- ========================================================= -->
+  <!-- About Section -->
   <section id="about" class="about-section">
-    <div class="rh-glyph-wrapper">
-  <h2 class="rh-glyph">R.H.</h2>
-  <p class="tagline">Not chosen by fate. Chosen by action.</p>
-</div>
-
-
+    <figure class="profile">
+      <img src="assets/images/profile.jpg" alt="Rayhan Hameed" loading="lazy">
+    </figure>
     <article class="bio">
-      <h2>About the Prefect</h2>
+      <h2>About Me</h2>
       <p>
-        I am Rayhan Hameed, an Electronics & Communication Engineering student at
-        Coimbatore Institute of Technology, concurrently pursuing a BSc in Data Science
-        from IIT Madras. My passion lies at the nexus of embedded systems, signal
-        processing and imaginative storytelling.
+        I'm Rayhan Hameed, an Electronics & Communication Engineering student at Coimbatore Institute of Technology, 
+        concurrently pursuing a BSc in Data Science from IIT Madras. My passion lies at the intersection of embedded systems, 
+        signal processing, and innovative storytelling.
       </p>
       <p>
-        <strong>Languages:</strong> English · Tamil · Hindi · Urdu · French A2 ·
-        Japanese (初級)
+        <strong>Languages:</strong> English · Tamil · Hindi · Urdu · French A2 · Japanese (初級)
       </p>
       <blockquote>“Not chosen by fate. Chosen by action.”</blockquote>
     </article>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 📜 MY JOURNEY (TIMELINE)                                  -->
-  <!-- ========================================================= -->
-  <section id="journey" class="timeline-section">
-    <h2>My Journey</h2>
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
     <div class="timeline">
       <div class="timeline-item">
         <h3>Lumora Media</h3>
         <p>Content Editor</p>
+        <p>2023 - Present</p>
       </div>
       <div class="timeline-item">
         <h3>IMD Radar Internship</h3>
         <p>Antenna & GUI Project</p>
+        <p>Summer 2023</p>
       </div>
       <div class="timeline-item">
         <h3>Toastmasters</h3>
         <p>Public Speaking & Leadership</p>
+        <p>2022 - Present</p>
       </div>
       <div class="timeline-item">
         <h3>IITM Paradox</h3>
         <p>Content & Editorial</p>
+        <p>2022 - 2023</p>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 🛠️ PROJECTS & BUILDS                                     -->
-  <!-- ========================================================= -->
+  <!-- Projects Section -->
   <section id="projects" class="projects-section">
-    <!-- Hero project -->
-    <article class="project-hero">
-      <img
-        src="./assets/images/hero-project.jpg"
-        alt="Hero project preview"
-        loading="lazy"
-      />
-      <div class="overlay">
-        <h2>Autonomous Swarm Rover</h2>
-        <button class="primaryBtn" id="exploreMission">Explore Mission</button>
-      </div>
-    </article>
-
-    <!-- Staggered project grid -->
+    <h2>Projects</h2>
     <div class="project-grid">
-      <!-- repeat .card for each project -->
       <div class="card">
-        <h3>Aerial Spectra</h3>
-        <p>Real-time drone spectral analysis.</p>
-        <p class="tools">Python · OpenCV · Flask</p>
+        <h3>RFID-Based Traffic Management System</h3>
+        <p>Smart traffic control system for emergency vehicles</p>
+        <p class="tools">Arduino · Embedded Systems · IoT</p>
         <div class="actions">
-          <a href="https://github.com/username/project" target="_blank" rel="noopener"
-            >GitHub</a
-          >
           <button class="detailsBtn">Details</button>
         </div>
       </div>
-      <!-- Add more cards -->
+      <div class="card">
+        <h3>Dual-Axis Antenna System</h3>
+        <p>Weather radar antenna positioning system</p>
+        <p class="tools">Arduino · Fusion 360 · Servo Systems</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>LED Blinker Circuit</h3>
+        <p>Self-oscillating multivibrator circuit</p>
+        <p class="tools">Analog Circuit Design · EasyEDA</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Traffic Light Controller</h3>
+        <p>Timer-controlled LED sequence system</p>
+        <p class="tools">IC-555 Timer · PCB Design</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 📄 RESUME                                                -->
-  <!-- ========================================================= -->
-  <section id="resume" class="resume-section">
-    <h2>Download My Codex</h2>
-    <button id="resumeBtn" class="primaryBtn" title="View or download my resume (PDF)">
-      Download My Codex
-    </button>
-    <a href="assets/resume.pdf" download>Download My Codex</a>
-    <img
-      src="./assets/images/resume-qr.png"
-      alt="QR code linking to resume PDF"
-      class="qr"
-      loading="lazy"
-    />
-  </section>
-
-  <!-- ========================================================= -->
-  <!-- ⚙️ SKILLS & TOOLS                                        -->
-  <!-- ========================================================= -->
+  <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <h2>Skills & Tools</h2>
-    <div class="skill-radar">
-      <!-- Radar nodes via JS -->
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Software</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Arduino</span>
+          <span class="skill-tag">Fusion 360</span>
+          <span class="skill-tag">EasyEDA</span>
+          <span class="skill-tag">MATLAB</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Platforms</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">ROS</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Canva</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Public Speaking</span>
+          <span class="skill-tag">Storytelling</span>
+          <span class="skill-tag">Content Writing</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 🏅 HIGHLIGHTS                                             -->
-  <!-- ========================================================= -->
-  <section id="highlights" class="highlights-section">
-    <h2>Highlights</h2>
-    <div class="badge-grid">
-      <div class="badge">Centum in Math</div>
-      <div class="badge">SpellBee Bronze</div>
-      <div class="badge">Cisco AI Cert</div>
-      <div class="badge">French A2</div>
-    </div>
+  <!-- Resume Section -->
+  <section id="resume" class="resume-section">
+    <h2>Download My Resume</h2>
+    <button id="resumeBtn" class="primaryBtn">Download PDF</button>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 📝 BLOG / JOURNAL                                        -->
-  <!-- ========================================================= -->
-  <section id="blog" class="blog-section">
-    <h2>Blog</h2>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <h3>Prototype to Product</h3>
-        <p class="excerpt">
-          Turning a weekend proof-of-concept into a market-ready solution…
-        </p>
-        <time datetime="2025-05-10">10 May 2025</time>
-      </article>
-      <!-- More blog cards -->
-    </div>
-  </section>
-
-  <!-- ========================================================= -->
-  <!-- 📨 CONTACT                                               -->
-  <!-- ========================================================= -->
+  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Get in Touch</h2>
-    <form id="contactForm" novalidate>
+    <form id="contactForm">
       <label>
         Name
-        <input type="text" name="name" required />
+        <input type="text" name="name" required>
       </label>
-
       <label>
         Email
-        <input type="email" name="email" required />
+        <input type="email" name="email" required>
       </label>
-
       <label>
         Message
         <textarea name="message" rows="5" required></textarea>
       </label>
-
-      <button type="submit" class="primaryBtn">Send</button>
+      <button type="submit" class="primaryBtn">Send Message</button>
     </form>
-
-    <div class="social">
-      <a href="mailto:rayhan@example.com" aria-label="Send mail">📧</a>
-      <a
-        href="https://www.linkedin.com/in/rayhan-hameed"
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn profile"
-        >🔗</a
-      >
+    <div class="social-icons">
+      <a href="https://www.instagram.com/therayhan.5h/" target="_blank" aria-label="Instagram">
+        📸
+      </a>
+      <a href="https://www.linkedin.com/in/rayhanh5106/" target="_blank" aria-label="LinkedIn">
+        👔
+      </a>
+      <a href="https://github.com/Ray-5106" target="_blank" aria-label="GitHub">
+        🐙
+      </a>
+      <a href="https://wa.me/919487405106" target="_blank" aria-label="WhatsApp">
+        💬
+      </a>
+      <a href="mailto:rayhanhameed5@gmail.com" aria-label="Email">
+        ✉️
+      </a>
     </div>
   </section>
 
-  <!-- ========================================================= -->
-  <!-- 🔚 FOOTER                                                -->
-  <!-- ========================================================= -->
-  <footer id="footer" class="footer-section">
-    <p id="quoteRotator">“Magic happens when code meets imagination.”</p>
-    <small>© 2025 Rayhan Hameed • <a href="#">Privacy & Terms</a></small>
-    <div class="orbiting-rune" aria-hidden="true"></div>
+  <!-- Footer -->
+  <footer class="footer-section">
+    <p id="quoteRotator">"Magic happens when code meets imagination."</p>
+    <small>© 2023 Rayhan Hameed • <a href="#">Privacy & Terms</a></small>
   </footer>
 
-  <!-- ======= MAIN SCRIPT ======= -->
-  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
