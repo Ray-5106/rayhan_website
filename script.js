@@ -16,13 +16,12 @@ const APP_STATE = {
 };
 
 const QUOTES = [
-  "It does not do to dwell on dreams and forget to live. - Harry Potter",
+ "It does not do to dwell on dreams and forget to live. - Harry Potter",
   "All we have to decide is what to do with the time that is given us. - The Lord of the Rings",
   "When you play the game of thrones, you win or you die. - Game of Thrones",
   "I am inevitable. - Thanos",
   "With great power comes great responsibility. - Spiderman",
   "Not all those who wander are lost. - The Lord of the Rings"
-
 ];
 
 /********************************************
@@ -59,7 +58,7 @@ function initializeTheme() {
 }
 
 function toggleTheme() {
-  const newTheme = APP_STATE.currentTheme === 'dark';
+  const newTheme = APP_STATE.currentTheme === 'dark' ? 'light' : 'dark';
   APP_STATE.currentTheme = newTheme;
   
   document.body.setAttribute('data-theme', newTheme);
@@ -73,7 +72,13 @@ function toggleTheme() {
   }, 300);
 }
 
-
+function updateThemeIcon() {
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.textContent = APP_STATE.currentTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.setAttribute('aria-pressed', APP_STATE.currentTheme === 'light');
+  }
+}
 
 /********************************************
   Audio Management with Howler.js
