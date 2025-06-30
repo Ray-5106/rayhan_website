@@ -5,14 +5,6 @@
  * particles, typewriter, form validation, and scroll effects
  */
 
-/// script.js - 990+ lines of comprehensive functionality
-/**
- * Rayhan Hameed Portfolio - script.js
- * Cinematic & Magical Interactive Experience
- * Handles: splash animation, audio, theme toggle, navigation,
- * particles, typewriter, form validation, and scroll effects
- */
-
 /********************************************
   Global State & Configuration
 *********************************************/
@@ -20,18 +12,15 @@ const APP_STATE = {
   audioMuted: true,
   currentTheme: 'dark',
   splashComplete: false,
-  animationsEnabled: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-  currentSection: null,
-  quotes: [
-    "It does not do to dwell on dreams and forget to live. - Albus Dumbledore",
-    "All we have to decide is what to do with the time that is given us. - Gandalf",
-    "When you play the game of thrones, you win or you die. - Cersei Lannister",
-    "I am inevitable. - Thanos",
-    "With great power comes great responsibility. - Uncle Ben",
-    "Not all those who wander are lost. - J.R.R. Tolkien"
-  ],
-  currentQuoteIndex: 0
+  animationsEnabled: !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 };
+
+const QUOTES = [
+  "Magic happens when code meets imagination.",
+  "کوڈ اور تخیل کا ملاپ جادو بناتا ہے۔",
+  "कोड और कल्पना का मेल जादू बनाता है।",
+  "La magie arrive quand le code rencontre l'imagination."
+];
 
 /********************************************
   DOM Ready & Initialization
@@ -145,19 +134,6 @@ function initializeSplashScreen() {
     return;
   }
   
-  // Create particles for splash screen
-  const splashOverlay = document.querySelector('.splash-overlay');
-  if (splashOverlay) {
-    for (let i = 0; i < 20; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-      particle.style.animationDelay = `${Math.random() * 2}s`;
-      splashOverlay.appendChild(particle);
-    }
-  }
-  
   // Start splash sequence
   setTimeout(() => animateRadarSweep(), 200);
   setTimeout(() => animateCircuitTraces(), 800);
@@ -166,12 +142,12 @@ function initializeSplashScreen() {
   setTimeout(() => animateBlueprintLines(), 2600);
   setTimeout(() => animateInitialsConvergence(), 3200);
   
-  // Auto-hide after 6 seconds
+  // Auto-hide after 5 seconds
   setTimeout(() => {
     if (!APP_STATE.splashComplete) {
       hideSplash();
     }
-  }, 6000);
+  }, 5000);
 }
 
 function animateRadarSweep() {
