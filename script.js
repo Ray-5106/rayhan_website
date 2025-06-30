@@ -16,12 +16,12 @@ const APP_STATE = {
 };
 
 const QUOTES = [
- "It does not do to dwell on dreams and forget to live. - Harry Potter",
-  "All we have to decide is what to do with the time that is given us. - The Lord of the Rings",
-  "When you play the game of thrones, you win or you die. - Game of Thrones",
+   "It does not do to dwell on dreams and forget to live. - Albus Dumbledore",
+  "All we have to decide is what to do with the time that is given us. - Gandalf",
+  "When you play the game of thrones, you win or you die. - Cersei Lannister",
   "I am inevitable. - Thanos",
-  "With great power comes great responsibility. - Spiderman",
-  "Not all those who wander are lost. - The Lord of the Rings"
+  "With great power comes great responsibility. - Uncle Ben",
+  "Not all those who wander are lost. - J.R.R. Tolkien"
 ];
 
 /********************************************
