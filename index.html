@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rayhan Hameed | Prefect of Innovation</title>
   <meta name="description" content="Cinematic, magical portfolio of Rayhan Hameed - ECE @ CIT & BS Data Science @ IIT Madras." />
-  <meta name="keywords" content="Rayhan Hameed, portfolio, ECE, IIT Madras, web developer" />
+  <meta name="keywords" content="Rayhan Hameed, portfolio, ECE, IIT Madras" />
   <meta name="author" content="Rayhan Hameed" />
 
   <!-- ======= OPEN-GRAPH / TWITTER ======= -->
   <meta property="og:title" content="Rayhan Hameed | Prefect of Innovation" />
-  <meta property="og:description" content="Explore my projects, journey, skills and magical creations." />
+  <meta property="og:description" content="Explore my projects, journey, skills, and magical creations." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./assets/images/og-cover.jpg" />
   <meta property="og:url" content="https://your-future-domain.com" />
@@ -104,7 +104,7 @@
 
     <h2 class="typewriter" aria-live="polite">
       <span id="typeLine1">Welcome, Prefect&nbsp;of&nbsp;Innovation.</span><br />
-      <span id="typeLine2">Your chamber&nbsp;awaits.</span>
+      <span id="typeLine2">Your Chamber&nbsp;Awaits.........</span>
     </h2>
 
     <button id="enterBtn" class="primaryBtn" title="Enter my world">
@@ -140,23 +140,24 @@
   <!-- 📖 ABOUT THE PREFECT                                      -->
   <!-- ========================================================= -->
   <section id="about" class="about-section">
-    <div class="rh-glyph-wrapper">
-  <h2 class="rh-glyph">R.H.</h2>
-  <p class="tagline">Not chosen by fate. Chosen by action.</p>
-</div>
-
+    <figure class="profile">
+      <img
+        src="./assets/images/profile.jpg"
+        alt="Portrait of Rayhan Hameed"
+        loading="lazy"
+      />
+    </figure>
 
     <article class="bio">
       <h2>About the Prefect</h2>
       <p>
         I am Rayhan Hameed, an Electronics & Communication Engineering student at
-        Coimbatore Institute of Technology, concurrently pursuing a BSc in Data Science
+        Chennai Institute of Technology, simultaneously also pursuing a BSc in Data Science
         from IIT Madras. My passion lies at the nexus of embedded systems, signal
         processing and imaginative storytelling.
       </p>
       <p>
-        <strong>Languages:</strong> English · Tamil · Hindi · Urdu · French A2 ·
-        Japanese (初級)
+        <strong>Languages:</strong> English · Tamil · Hindi · Urdu · French A2 
       </p>
       <blockquote>“Not chosen by fate. Chosen by action.”</blockquote>
     </article>
@@ -189,36 +190,41 @@
 
   <!-- ========================================================= -->
   <!-- 🛠️ PROJECTS & BUILDS                                     -->
-  <!-- ========================================================= -->
-  <section id="projects" class="projects-section">
-    <!-- Hero project -->
-    <article class="project-hero">
-      <img
-        src="./assets/images/hero-project.jpg"
-        alt="Hero project preview"
-        loading="lazy"
-      />
-      <div class="overlay">
-        <h2>Autonomous Swarm Rover</h2>
-        <button class="primaryBtn" id="exploreMission">Explore Mission</button>
-      </div>
-    </article>
-
-    <!-- Staggered project grid -->
+  <!-- ========================================================= --> <section id="projects" class="projects-section">
+    <h2>Projects</h2>
     <div class="project-grid">
-      <!-- repeat .card for each project -->
       <div class="card">
-        <h3>Aerial Spectra</h3>
-        <p>Real-time drone spectral analysis.</p>
-        <p class="tools">Python · OpenCV · Flask</p>
+        <h3>RFID-Based Traffic Management System</h3>
+        <p>Smart traffic control system for emergency vehicles</p>
+        <p class="tools">Arduino · Embedded Systems · IoT</p>
         <div class="actions">
-          <a href="https://github.com/username/project" target="_blank" rel="noopener"
-            >GitHub</a
-          >
           <button class="detailsBtn">Details</button>
         </div>
       </div>
-      <!-- Add more cards -->
+      <div class="card">
+        <h3>Dual-Axis Antenna System</h3>
+        <p>Weather radar antenna positioning system</p>
+        <p class="tools">Arduino · Fusion 360 · Servo Systems</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>LED Blinker Circuit</h3>
+        <p>Self-oscillating multivibrator circuit</p>
+        <p class="tools">Analog Circuit Design · EasyEDA</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Traffic Light Controller</h3>
+        <p>Timer-controlled LED sequence system</p>
+        <p class="tools">IC-555 Timer · PCB Design</p>
+        <div class="actions">
+          <button class="detailsBtn">Details</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -226,26 +232,43 @@
   <!-- 📄 RESUME                                                -->
   <!-- ========================================================= -->
   <section id="resume" class="resume-section">
-    <h2>Download My Codex</h2>
-    <button id="resumeBtn" class="primaryBtn" title="View or download my resume (PDF)">
-      Download My Codex
-    </button>
-    <!-- Optional QR -->
-    <img
-      src="./assets/images/resume-qr.png"
-      alt="QR code linking to resume PDF"
-      class="qr"
-      loading="lazy"
-    />
+    <h2>Download My Resume</h2>
+    <button id="resumeBtn" class="primaryBtn">Download PDF</button>
   </section>
+
 
   <!-- ========================================================= -->
   <!-- ⚙️ SKILLS & TOOLS                                        -->
   <!-- ========================================================= -->
-  <section id="skills" class="skills-section">
+   <section id="skills" class="skills-section">
     <h2>Skills & Tools</h2>
-    <div class="skill-radar">
-      <!-- Radar nodes via JS -->
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Softwares</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Arduino IDE</span>
+          <span class="skill-tag">Fusion 360</span>
+          <span class="skill-tag">EasyEDA</span>
+          <span class="skill-tag">MATLAB</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Public Speaking</span>
+          <span class="skill-tag">Storytelling</span>
+          <span class="skill-tag">Content Writing</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -282,38 +305,42 @@
   <!-- ========================================================= -->
   <!-- 📨 CONTACT                                               -->
   <!-- ========================================================= -->
-  <section id="contact" class="contact-section">
+   <section id="contact" class="contact-section">
     <h2>Get in Touch</h2>
-    <form id="contactForm" novalidate>
+    <form id="contactForm">
       <label>
         Name
-        <input type="text" name="name" required />
+        <input type="text" name="name" required>
       </label>
-
       <label>
         Email
-        <input type="email" name="email" required />
+        <input type="email" name="email" required>
       </label>
-
       <label>
         Message
         <textarea name="message" rows="5" required></textarea>
       </label>
-
-      <button type="submit" class="primaryBtn">Send</button>
+      <button type="submit" class="primaryBtn">Send Message</button>
     </form>
-
-    <div class="social">
-      <a href="mailto:rayhan@example.com" aria-label="Send mail">📧</a>
-      <a
-        href="https://www.linkedin.com/in/rayhan-hameed"
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn profile"
-        >🔗</a
-      >
+    <div class="social-icons">
+      <a href="https://www.instagram.com/therayhan.5h/" target="_blank" aria-label="Instagram">
+        📸
+      </a>
+      <a href="https://www.linkedin.com/in/rayhanh5106/" target="_blank" aria-label="LinkedIn">
+        🎓
+      </a>
+      <a href="https://github.com/Ray-5106" target="_blank" aria-label="GitHub">
+        💻
+      </a>
+      <a href="https://wa.me/919487405106" target="_blank" aria-label="WhatsApp">
+        📞
+      </a>
+      <a href="mailto:rayhanhameed5@gmail.com" aria-label="Email">
+        📧
+      </a>
     </div>
   </section>
+
 
   <!-- ========================================================= -->
   <!-- 🔚 FOOTER                                                -->
